@@ -42,7 +42,7 @@ def response(query):
     return json.dumps(results)
 
 def save_obj(obj, name):
-    with open(name + '.txt', 'wb') as f:
+    with open(name + '.obj', 'wb') as f:
         pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
 
 if __name__ == '__main__':
