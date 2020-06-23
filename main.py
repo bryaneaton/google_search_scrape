@@ -42,7 +42,7 @@ def response(query):
     return json.dumps(results)
 
 def save_obj(obj, name):
-    with open('obj/' + name + '.pkl', 'wb') as f:
+    with open('obj/' + name + '.txt', 'wb') as f:
         pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
 
 if __name__ == '__main__':
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     keys = range(100, 999)
     for i in keys:
         data[i] = response(f'{i} new cases')
-    save_obj(data, 'google_results.txt')
+    save_obj(data, 'google_results')
 
 
 
