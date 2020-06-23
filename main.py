@@ -48,9 +48,7 @@ def save_obj(obj, name):
 if __name__ == '__main__':
     data = dict()  # JSON object
     keys = range(100, 999)
-    n = 0
     for i in keys:
-        logging.info(f'Search term: {i}')
         data[i] = response(f'{i} new cases')
     save_obj(data, 'google_results.txt')
 
